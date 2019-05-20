@@ -1,32 +1,116 @@
-// Image Widget
+// ListView Widget 2 横向
 import 'package:flutter/material.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Image Widget',
+      title: 'ListView Widget',
       home: Scaffold(
         body: Center(
           child: Container(
-            child: new Image.network(
-              'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1690699292,1481547313&fm=27&gp=0.jpg',
-              scale: 1.0,
-              fit: BoxFit.contain,
-              color: Colors.greenAccent,// 只设置color没有意义
-              colorBlendMode: BlendMode.darken,// 设置混合模式
-              repeat: ImageRepeat.repeat,
-            ),
-            width: 375.0,
-            height: 400.0,
-            color: Colors.lightBlue,
+            height: 200.0,
+            child: MyList()
           ),
         ),
       ),
     );
   }
 }
+
+class MyList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      scrollDirection: Axis.horizontal,
+              children: <Widget>[
+                Container(
+                  width: 180.0,
+                  color: Colors.greenAccent,
+                ),
+                Container(
+                  width: 180.0,
+                  color: Colors.lightBlue,
+                ),
+                Container(
+                  width: 180.0,
+                  color: Colors.pinkAccent,
+                ),
+              ],
+    );
+  }
+}
+
+
+// // ListView Widget 1 竖向
+// import 'package:flutter/material.dart';
+
+// void main() => runApp(MyApp());
+
+// class  MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'He Qing Demo',
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text('ListView Widget'),
+//         ),
+//         body: ListView(
+//           children: <Widget>[
+//             // ListTile(
+//             //   leading: Icon(Icons.access_time),
+//             //   title: Text('access_time'),
+//             // ),
+//             // ListTile(
+//             //   leading: Icon(Icons.account_balance),
+//             //   title: Text('account_balance'),
+//             // ),
+//             Image.network("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1094983219,2445956258&fm=27&gp=0.jpg"),
+//             Image.network('https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1094983219,2445956258&fm=27&gp=0.jpg'),
+//             Image.network('https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1094983219,2445956258&fm=27&gp=0.jpg')
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+
+
+// // Image Widget
+// import 'package:flutter/material.dart';
+// void main() => runApp(MyApp());
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Image Widget',
+//       home: Scaffold(
+//         body: Center(
+//           child: Container(
+//             child: new Image.network(
+//               'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1690699292,1481547313&fm=27&gp=0.jpg',
+//               scale: 1.0,
+//               fit: BoxFit.contain,
+//               color: Colors.greenAccent,// 只设置color没有意义
+//               colorBlendMode: BlendMode.darken,// 设置混合模式
+//               repeat: ImageRepeat.repeat,
+//             ),
+//             width: 375.0,
+//             height: 400.0,
+//             color: Colors.lightBlue,
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+
 
 
 // // Container Widget
@@ -66,6 +150,7 @@ class MyApp extends StatelessWidget {
 //     );
 //   }
 // }
+
 
 
 
